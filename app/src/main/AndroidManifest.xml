@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.koval42ipzlab01">
+    package="com.example.solovjn_42ipz_lab3">
 
     <application
         android:allowBackup="true"

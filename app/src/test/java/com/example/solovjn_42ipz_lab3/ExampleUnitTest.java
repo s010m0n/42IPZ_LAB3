@@ -1,4 +1,4 @@
-package com.example.koval42ipzlab01;
+package com.example.solovjn_42ipz_lab3;
 
 import org.junit.Test;
 
