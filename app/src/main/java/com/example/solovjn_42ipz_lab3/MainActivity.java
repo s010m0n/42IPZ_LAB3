@@ -18,19 +18,19 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        runTimer();
-        textTimer = findViewById(R.id.textTimer);
-        if (savedInstanceState != null)
         {
-            seconds = savedInstanceState.getInt("seconds");
-            isRunning = savedInstanceState.getBoolean("isRunning");
-            wasRunning = savedInstanceState.getBoolean("wasRunning");
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+
+            runTimer();
+            textTimer = findViewById(R.id.textTimer);
+            if (savedInstanceState != null)
+            {
+                seconds = savedInstanceState.getInt("seconds");
+                isRunning = savedInstanceState.getBoolean("isRunning");
+                wasRunning = savedInstanceState.getBoolean("wasRunning");
+            }
         }
-    }
 
 
     public void onClickStartTimer(View view)
@@ -42,14 +42,15 @@ public class MainActivity extends AppCompatActivity
         isRunning  = false;
     }
     public void onClickResetTimer(View view)
-    {
-        isRunning  = false;
-        seconds = 0;
-      // textTimer.setText(getString(R.string.init_time));
-    }
+        {
+            isRunning  = false;
+            seconds = 0;
+          // textTimer.setText(getString(R.string.init_time));
+        }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(Bundle outState)
+    {
         super.onSaveInstanceState(outState);
 
         outState.putBoolean("isRunning",  isRunning);
@@ -81,15 +82,15 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onResume() {
-        super.onResume();
-        isRunning = wasRunning;
-    }
+            super.onResume();
+            isRunning = wasRunning;
+        }
 
     @Override
     protected void onPause() {
-        super.onPause();
+            super.onPause();
 
-        wasRunning = isRunning;
-        isRunning = false;
-    }
+            wasRunning = isRunning;
+            isRunning = false;
+        }
 }
